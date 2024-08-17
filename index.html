@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Que Dios se Apiade</title>
+
+    <style>
+        .unbold{
+            font-weight: normal;
+        }
+
+        .textoNegrita{
+            text-decoration: dashed;
+        }
+        
+        .textoCursiva{
+            font-style: italic;
+        }
+
+        .textoSubrayado{
+            text-decoration: underline;
+        }
+        table{
+            border: 1px solid black;
+        }
+
+        th, td{
+            border: 1px solid black;
+            font-size: 20px;
+            text-align: left;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>Encabezado Principal</h1>
+        <ul>
+            <li><a href="#estructura">Estructura</a></li>
+            <li><a href="#multimedia">Multimedia</a></li>
+            <li><a href="#formularios">Formulario</a></li>
+        </ul>
+    </header>
+    <main>
+        <!-- 4.1 Estructura Basica del Documento HTML -->
+        <section>
+            <h1>1. Estructura Básica del Documento HTML</h1>
+            <p>Este documento HTML, tiene una estructura básica que incluye la declaración de DOCTYPE, etiquetas de metadatos y un título.</p>
+        </section>
+
+        <!-- 4.2 Encabezados y Propiedades del Texto -->
+        <section>
+            <h1>2. Encabezados y Propiedades de Texto</h1>
+            <h2 class="textoNegrita">Este es un texto en negrita.</h2>
+            <h3 class="textoCursiva">Este es un texto en cursiva.</h3>
+            <h4 class="textoSubrayado">Este es un texto subrayado.</h4>
+            <h5><mark>Este es un texto remarcado.</mark></h5>
+            <h6>Este es un texto</h6>
+        </section>
+
+        <!-- 4.3 Divisiones y Agrupacion de Contenido -->
+        <section>
+            <h1>3. Divisiones y Agrupación de Contenido</h1>
+            <div>
+                <h2>Sección 1</h2>
+                <p style="font-size: large;">Contenido de la primera sección agrupada en un <span style="font-family: Arial, Helvetica, sans-serif;">div</span>.</p>
+            </div>
+            <div>
+                <h2>Sección 2</h2>
+                <p style="font-size: large;">Contenido de la primera sección agrupada en un <span style="font-family: Arial, Helvetica, sans-serif;">div</span>.</p>
+            </div>
+        </section>
+
+        <!-- 4.4 Enlaces y Listas -->
+        <section id="estructura">
+            <h1>4. Enlaces y Listas</h1>
+            
+            <div>
+                <p style="font-size: large;">Visita nuestro <a href="https://quimey-ortiz.itch.io/urbanizator"> sitio web</a> para más información.</p>
+            </div>
+
+            <div>
+                <h2 class="unbold">Enlaces internos:</h2>
+                <ul>
+                    <li><a href="#estructura">Ir a Estructura</a></li>
+                    <li><a href="#multimedia">Ir a Multimedia</a></li>
+                    <li><a href="#formularios">Ir a Formulario</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h2 class="unbold">Lista desordenada:</h2>
+                <ul>
+                    <li>Primer ítem de una lista desordenada</li>
+                    <li>Segundo ítem de una lista desordenada</li>
+                </ul>
+            </div>
+
+            <div>
+                <h2 class="unbold">Lista ordenada:</h2>
+                <ol>
+                    <li>Primer ítem de una lista ordenada</li>
+                    <li>Segundo ítem de una lista ordenada</li>
+                </ol>
+            </div>
+        </section>
+        <!-- 4.5 Elementos Multimedia -->
+        <section id="multimedia">
+            <h1>5. Elementos Multimedia</h1>
+            <div>
+                <img
+                src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fen%2F0%2F05%2FLeprous_aphelion.jpg&f=1&nofb=1&ipt=bddbb345c870cc5f143ae3dfcf173288bfc4b94d1221afc94c99b16dba86464a&ipo=images" 
+                width="320"
+                alt="portada del album Aphelion by Leprous">
+                
+                <video src=".\kazakhstan-uber-zait-nam-bambordeloke.mp4"
+                controls
+                width="320"></video>
+
+                <audio controls src="./running-low-leprous.mp3"></audio>
+            </div>
+        </section>
+        <!-- 4.6 Tablas -->
+        <section>
+            <h1>6. Tablas</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Columna 1</th>
+                        <th>Columna 2</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr>
+                        <td>Dato 1</td>
+                        <td>Dato 2</td>
+                    </tr>
+                    <tr>
+                        <td>Dato 3</td>
+                        <td>Dato 4</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <!-- 4.7 Formularios -->
+        <section id="formularios">
+            <h1>7. Formularios</h1>
+            <form action="">
+                <label>Nombre</label>
+                <input type="email" placeholder="example@example.com">
+                
+                <label>Email</label>
+                <input type="text" placeholder="Ingrese su nombre">
+                
+                <label>Mensaje</label>
+                <textarea placeholder="Información extra"></textarea>
+                
+                <button>Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        
+    </footer>    
+</body>
+</html>
