@@ -1,4 +1,5 @@
-Primero debemos clonar el repositorio para tener acceso a los archivos. Podemos clonarlo directamente desde la página de GitHub o con el siguiente comando:
+Primero debemos tener acceso a los archivos del repositorio. Para eso podemos optar por descargarlo o clonarlo.
+Podemos clonarlo directamente desde la página de GitHub o con el siguiente comando:
 ```
 git clone https://github.com/AfterTheShock/desarrollo-sofware
 ```
