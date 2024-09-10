@@ -1,9 +1,7 @@
 package Entidades;
 
-import lombok.Getter;
-import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+import org.hibernate.envers.Audited;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -11,10 +9,10 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-@Getter
-@Setter
-@RequiredArgsConstructor
+@Data
+@Builder
 @Table(name = "Categoria")
+@Audited
 public class Categoria implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,5 +21,5 @@ public class Categoria implements Serializable {
     @ManyToMany(mappedBy = "categorias")
     private Set<Articulo> articulos = new HashSet<>();
 
-    @NonNull private String denominacion;
+    private String denominacion;
 }

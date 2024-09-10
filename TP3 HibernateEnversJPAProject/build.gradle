@@ -13,8 +13,9 @@ dependencies {
     //H2 database dependency
     runtimeOnly 'com.h2database:h2:1.4.200'
 
-    //JPA dependency
+    //JPA Hibernate Envers dependency
     implementation 'org.hibernate:hibernate-core:5.6.10.Final'
+    implementation 'org.hibernate:hibernate-envers:5.6.10.Final'
     implementation 'org.hibernate:hibernate-entitymanager:5.6.10.Final'
 
     //Lombok

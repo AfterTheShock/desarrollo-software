@@ -1,26 +1,25 @@
 package Entidades;
 
-import lombok.Getter;
-import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+import org.hibernate.envers.Audited;
 
 import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Getter
-@Setter
-@RequiredArgsConstructor
+@Data
+@Builder
 @Table(name = "Domicilio")
+@Audited
 public class Domicilio implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    //@Builder.Default
     @OneToOne(mappedBy = "domicilio")
     private Cliente cliente;
 
-    @NonNull private String nombreCalle;
-    @NonNull private int numero;
+    private String nombreCalle;
+    private int numero;
 }

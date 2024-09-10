@@ -1,9 +1,8 @@
 package Entidades;
 
-import lombok.Getter;
-import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+import org.hibernate.envers.Audited;
+import org.hibernate.envers.NotAudited;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -11,16 +10,16 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-@Getter
-@Setter
-@RequiredArgsConstructor
+@Data
+@Builder
 @Table(name = "Articulo")
+@Audited
 public class Articulo implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToMany(mappedBy = "articulo")
+    @OneToMany(mappedBy = "articulo", cascade = CascadeType.PERSIST)
     private Set<DetalleFactura> detalleFacturas = new HashSet<>();
 
     @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
@@ -29,7 +28,7 @@ public class Articulo implements Serializable {
             inverseJoinColumns = @JoinColumn(name = "categoriaId"))
     private Set<Categoria> categorias = new HashSet<>();
 
-    @NonNull private int cantidad;
-    @NonNull private String denominacion;
-    @NonNull private int precio;
+    private int cantidad;
+    private String denominacion;
+    private int precio;
 }
