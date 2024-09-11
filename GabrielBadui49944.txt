@@ -1,2 +1,6 @@
+GitHub Repo URL:
 https://github.com/AfterTheShock/desarrollo-software
+H2 URL: 
+http://192.168.56.1:8082/login.jsp?jsessionid=a798d8078fa3090c081b7a75c3e89473
+H2 URL JDBC: 
 jdbc:h2:tcp://localhost/~/test
