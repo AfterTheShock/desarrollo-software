@@ -110,7 +110,7 @@ console.log('El libro "' + book.title + '" es antiguo: ' + ancientBook(book));
 
 //Ejercicio 6.1
 let numbers = [1,2,3,4,5,6,7,8,9,10];
-//let result = numbers.map((number) => number * 2); //Esto es mucho mejor, pero el ejercicio pide bucle xd
+//let result = numbers.map((item) => item * 2); //Esto es mucho mejor, pero el ejercicio pide bucle xd
 let result = [];
 numbers.forEach(number => {
     number = number * 2;
