@@ -7,7 +7,6 @@ import jakarta.persistence.Table;
 import lombok.*;
 import org.hibernate.envers.Audited;
 
-import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -21,11 +20,11 @@ import java.util.Set;
 @Audited
 public class Libro extends Base {
 
-    private Date fecha;
+    private String fecha;
     private String genero;
     private int paginas;
     private String titulo;
 
     @ManyToMany(cascade = CascadeType.REFRESH)
-    private Set<Autor> autores = new HashSet<Autor>();
+    private Set<Autor> autores = new HashSet<>();
 }

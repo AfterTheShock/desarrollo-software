@@ -9,4 +9,5 @@ public class LocalidadServiceImp extends BaseServiceImp<Localidad, Long> impleme
     public LocalidadServiceImp(BaseRepository<Localidad, Long> baseRepository){
         super(baseRepository);
     }
+
 }

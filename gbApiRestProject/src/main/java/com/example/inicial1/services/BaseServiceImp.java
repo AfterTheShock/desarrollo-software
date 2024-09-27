@@ -3,8 +3,9 @@ package com.example.inicial1.services;
 import com.example.inicial1.entities.Base;
 import com.example.inicial1.repositories.BaseRepository;
 import jakarta.transaction.Transactional;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
-import javax.swing.text.html.Option;
 import java.io.Serializable;
 import java.util.List;
 import java.util.Optional;
@@ -16,9 +17,22 @@ public abstract class BaseServiceImp<E extends Base, ID extends Serializable> im
         this.baseRepository = baseRepository;
     }
 
+    @Override
+    @Transactional
     public List<E> findAll() throws Exception{
         try{
             List<E> entities = baseRepository.findAll();
+            return entities;
+        } catch (Exception e) {
+            throw new Exception(e.getMessage());
+        }
+    }
+
+    @Override
+    @Transactional
+    public Page<E> findAll(Pageable pageable) throws Exception{
+        try{
+            Page<E> entities = baseRepository.findAll(pageable);
             return entities;
         } catch (Exception e) {
             throw new Exception(e.getMessage());

@@ -1,77 +1,83 @@
 package com.example.inicial1;
 
-import com.example.inicial1.entities.Domicilio;
-import com.example.inicial1.entities.Persona;
-import com.example.inicial1.repositories.PersonaRepository;
+import com.example.inicial1.entities.*;
 import jakarta.transaction.Transactional;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import com.example.inicial1.repositories.PersonaRepository;
 import org.springframework.context.annotation.Bean;
 
-import java.util.List;
-import java.util.Optional;
+import java.util.HashSet;
 
 @SpringBootApplication
 public class Inicial1Application {
-	private static final Logger logger = LoggerFactory.getLogger(Inicial1Application.class);
 
-	@Autowired
-	private PersonaRepository personaRepository;
+	/*@Autowired
+	PersonaRepository personaRepository;*/
+
 	public static void main(String[] args) {
 		SpringApplication.run(Inicial1Application.class, args);
 
 		System.out.println("funcionando");
 	}
 
-	@Bean
+	/*@Bean
 	@Transactional
 	CommandLineRunner init(PersonaRepository personaRepository) {
 		return args -> {
-	// Creo un objeto persona
-	Persona per1 = Persona.builder().
-		nombre("Alberto").apellido("Cortez").
-		build();
+			Localidad loc1 = Localidad.builder().
+					denominacion("Palmira").
+					build();
 
-	Domicilio dom1 = Domicilio.builder().
-		calle("Suipacha").
-		numero(239).build();
+			Localidad loc2 = Localidad.builder().
+					denominacion("Guaymallén").
+					build();
 
-	per1.setDomicilio(dom1);
-
-	personaRepository.save(per1);
-
-	// Creo otra persona
-			Persona per2 = Persona.builder().
-					nombre("Alicia").apellido("Calderon").
+			Domicilio dom1 = Domicilio.builder().
+					calle("Le Parc").
+					numero(122).
+					localidad(loc1).
 					build();
 
 			Domicilio dom2 = Domicilio.builder().
-					calle("Lulunta").
-					numero(339).build();
+					calle("José María Gutiérrez").
+					numero(4272).
+					localidad(loc2).
+					build();
 
-			per2.setDomicilio(dom2);
+			Persona per1 = Persona.builder().
+					nombre("Gabriel").
+					apellido("Badui").
+					domicilio(dom1).
+					build();
 
-			// Lo grabo a través del repositorio de Spring
-			personaRepository.save(per2);
+			Persona per2 = Persona.builder().
+					nombre("Gabriel").
+					apellido("Iglesias").
+					domicilio(dom2).
+					build();
 
-			List<Persona> recuperadas = personaRepository.findAll();
-			System.out.println(recuperadas);
+			Autor aut1 = Autor.builder().
+					nombre("Mark").
+					apellido("Manson").
+					biografia("Un montón de lore").
+					build();
 
-			logger.info("Detalles de la persona: {}", recuperadas);
+			Libro lib1 = Libro.builder().
+					titulo("El Sutil Arte de que (casi todo) te Importe una Mierda").
+					fecha("10/10/2016").
+					genero("Autoayuda").
+					paginas(233).
+					build();
 
-			Optional<Persona> recuperada = personaRepository.findById(1L);
-			System.out.println(recuperada);
+			per1.getLibros().add(lib1);
+			per2.getLibros().add(lib1);
+			lib1.getAutores().add(aut1);
 
-			logger.info("Detalles de la persona: {}", recuperada);
-
-
-			dom1.setCalle("Rodriguezaaaa");
-
-			personaRepository.save(per1);
+			*//*personaRepository.save(per1);
+			personaRepository.save(per2);*//*
 		};
-	};
+	};*/
 }

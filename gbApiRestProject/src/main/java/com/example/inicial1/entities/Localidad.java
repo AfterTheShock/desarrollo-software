@@ -10,9 +10,9 @@ import org.hibernate.envers.Audited;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Audited
 @Builder
 @Table(name = "localidad")
+@Audited
 public class Localidad extends Base {
 
     private String denominacion;

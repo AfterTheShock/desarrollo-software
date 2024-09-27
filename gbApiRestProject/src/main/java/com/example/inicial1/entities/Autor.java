@@ -3,10 +3,7 @@ package com.example.inicial1.entities;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.hibernate.envers.Audited;
 
 @Entity
@@ -14,8 +11,9 @@ import org.hibernate.envers.Audited;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Audited
 @Table(name = "autor")
+@Builder
+@Audited
 public class Autor extends Base{
 
     private String nombre;
