@@ -14,8 +14,8 @@ import java.util.HashSet;
 @SpringBootApplication
 public class Inicial1Application {
 
-	/*@Autowired
-	PersonaRepository personaRepository;*/
+	@Autowired
+	PersonaRepository personaRepository;
 
 	public static void main(String[] args) {
 		SpringApplication.run(Inicial1Application.class, args);
@@ -23,7 +23,7 @@ public class Inicial1Application {
 		System.out.println("funcionando");
 	}
 
-	/*@Bean
+	@Bean
 	@Transactional
 	CommandLineRunner init(PersonaRepository personaRepository) {
 		return args -> {
@@ -76,8 +76,8 @@ public class Inicial1Application {
 			per2.getLibros().add(lib1);
 			lib1.getAutores().add(aut1);
 
-			*//*personaRepository.save(per1);
-			personaRepository.save(per2);*//*
+			//*personaRepository.save(per1);
+			personaRepository.save(per2);
 		};
-	};*/
+	};
 }
