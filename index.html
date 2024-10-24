@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto Final</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <header>
+      <div class="mainHeader">
+        <div class="contentHeader">
+          <div class="searchHeader">
+            <input class="inputHeader" id="inputHeader" placeholder="Ingrese un Elemento" type="text">
+            <button class="buttonSearch iconExtra" id="searchBtn">
+              Buscar
+              <span class="material-symbols-outlined">search</span>
+            </button>
+          </div>
+          <div>
+            <button class="buttonAdd iconExtra" id="addElementBtn">
+            Agregar Elemento
+            <span class="material-symbols-outlined">
+              add_shopping_cart
+              </span>
+          </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+      <div class="view">
+        <aside class="listAside">
+          <h2 class="categoriesTitle iconExtra">
+            Categorias
+            <span class="material-symbols-outlined">filter_list</span>
+          </h2>
+
+          <ul id="listFilter"></ul>
+        </aside>
+        <div class="store" id="storeContainer">
+
+        </div>
+      </div>
+      
+      <!-- POPUP -->
+      <div class="mainPopUpContainer" id="modalPopUp">
+        <div class="popUpContainer">
+          <h1>Agregar o modificar un producto</h1>
+          <div class="containerItems">
+            <input placeholder="Ingrese un nombre" id="name" type="text">
+            <input placeholder="Ingrese una imagen" id="img" type="text">
+            <input placeholder="Ingrese un precio" id="price" type="number">
+            <select id="categories">
+              <option disabled selected hidden>Seleccione una categoria</option>
+              <option>Hamburguesas</option>
+              <option>Papas</option>
+              <option>Gaseosas</option>
+              <option>Mayor precio</option>
+              <option>Menor precio</option>
+            </select>
+          </div>
+          <div class="buttonContainer">
+            <button id="cancelBtn">Cancelar</button>
+            <button id="acceptBtn">Aceptar</button>
+            <button id="deleteBtn">Eliminar</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

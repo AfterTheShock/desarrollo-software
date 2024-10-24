@@ -1,5 +1,0 @@
-GitHub Repo URL:
-https://github.com/AfterTheShock/desarrollo-software
-
-H2 URL JDBC: 
-jdbc:h2:tcp://localhost/~/test
