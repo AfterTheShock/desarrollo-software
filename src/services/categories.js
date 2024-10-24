@@ -38,7 +38,7 @@ const filterProductsByCat = (cat) => {
 export const renderCategories = () =>{
     const ulList = document.getElementById("listFilter")
     ulList.innerHTML = `
-    <li id="Todo">Todos los productos</li>
+    <li id="Todo">Todo</li>
     <li id="Hamburguesas">Hamburguesas</li>
     <li id="Papas">Papas</li>
     <li id="Gaseosas">Gaseosas</li>
