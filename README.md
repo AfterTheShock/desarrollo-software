@@ -1,11 +1,11 @@
-Primero debemos tener acceso a los archivos del repositorio. Para eso podemos optar por descargarlo o clonarlo.
+#Integrador HTML CSS JavaScript
 
-Podemos clonarlo directamente desde la página de GitHub o con el siguiente comando:
+Para probar la página se debe tener instalado con anterioridad Node.js y Vite.
+
+Descargar el proyecto. A continuación abrir el IDE y una nueva terminal. Escribir el siguiente comando:
 ```
-git clone https://github.com/AfterTheShock/desarrollo-sofware
+npm run dev
 ```
-Una vez hecho esto, tenemos acceso a los archivos del proyecto desde nuestra computadora de forma local. Nos debemos dirigir a la carpeta donde se encuentre el trabajo a evaluar. Una vez dentro podemos hacer doble click sobre el archivo `index.html` y así abrirlo. Nos abrirá la página hecha en HTML.
+A continuación abrir el URL proporcionado para visualizar la página.
 
-Los archivos de cada trabajo están ubicados en distintas ramas. Cada rama tiene el nombre correspondiente al trabajo. Es posible moverse entre ramas desde GitHub.
-
-Los proyectos de Java están hechos en el IDE IntelliJ IDEA Community Edition. Se pueden abrir desde el propio programa.
+La página contempla un menú de un restaurante cualquiera, con varias categorías para filtrar los alimentos y un buscador particular. Se pueden añadir productos de forma dinámica. 
