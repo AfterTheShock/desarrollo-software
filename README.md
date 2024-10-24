@@ -1,4 +1,4 @@
-#Integrador HTML CSS JavaScript
+# Integrador HTML CSS JavaScript
 
 Para probar la página se debe tener instalado con anterioridad Node.js y Vite.
 
